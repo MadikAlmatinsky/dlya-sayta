@@ -1,0 +1,1622 @@
+```html
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>Асылханға 🤍</title>
+
+<style>
+
+/* =========================
+   БАЗА
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    background: #03060d;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   ЖАРҚЫРАҒАН ФОН
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    top: -180px;
+    left: -150px;
+
+    border-radius: 50%;
+
+    background: #147ce5;
+
+    filter: blur(140px);
+
+    opacity: .18;
+
+    z-index: -5;
+
+    animation: glowBlue 8s ease-in-out infinite alternate;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background: #724cff;
+
+    filter: blur(150px);
+
+    opacity: .15;
+
+    z-index: -5;
+
+    animation: glowPurple 9s ease-in-out infinite alternate;
+}
+
+@keyframes glowBlue {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(100px,150px) scale(1.35);
+    }
+
+}
+
+@keyframes glowPurple {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(-100px,-130px) scale(1.35);
+    }
+
+}
+
+
+/* =========================
+   ЖҰЛДЫЗДАР
+========================= */
+
+.star {
+    position: fixed;
+
+    color: #79bfff;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: 0;
+
+    animation: starMove linear infinite;
+}
+
+@keyframes starMove {
+
+    0% {
+        transform:
+        translateY(110vh)
+        scale(.2)
+        rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .8;
+    }
+
+    80% {
+        opacity: .5;
+    }
+
+    100% {
+        transform:
+        translateY(-15vh)
+        scale(1.3)
+        rotate(180deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px 22px;
+
+}
+
+
+.hero-content {
+
+    width: 100%;
+    max-width: 430px;
+
+    animation:
+    heroIn 1.5s cubic-bezier(.2,.8,.2,1);
+}
+
+
+@keyframes heroIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        translateY(60px)
+        scale(.9);
+
+        filter: blur(10px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================
+   HERO SMALL
+========================= */
+
+.small {
+
+    color: #70b7ff;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+
+    animation:
+    smallIn 1s ease .3s both;
+}
+
+
+@keyframes smallIn {
+
+    from {
+        opacity: 0;
+        letter-spacing: 15px;
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: 5px;
+    }
+
+}
+
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero h1 {
+
+    font-size: 56px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+}
+
+
+.gradient {
+
+    background:
+    linear-gradient(
+        90deg,
+        #57aaff,
+        #ffffff,
+        #7c7cff,
+        #57aaff
+    );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+    gradientMove 4s linear infinite;
+
+}
+
+
+@keyframes gradientMove {
+
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 300%;
+    }
+
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-description {
+
+    color: #9ba7b7;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    animation:
+    fadeUp 1s ease 1s both;
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background:
+    linear-gradient(
+        120deg,
+        #1269c5,
+        #6378ff,
+        #1269c5
+    );
+
+    background-size: 200%;
+
+    box-shadow:
+    0 0 30px
+    rgba(60,145,255,.3);
+
+    animation:
+    buttonGlow 3s ease-in-out infinite;
+
+    transition: .3s;
+}
+
+.button:active {
+
+    transform: scale(.93);
+
+}
+
+
+@keyframes buttonGlow {
+
+    0%,100% {
+
+        background-position: 0%;
+
+        box-shadow:
+        0 0 20px
+        rgba(60,145,255,.2);
+
+    }
+
+    50% {
+
+        background-position: 100%;
+
+        box-shadow:
+        0 0 45px
+        rgba(60,145,255,.6);
+
+    }
+
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+
+    padding: 100px 20px;
+
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: auto;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.title h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+.title p {
+
+    color: #6f7b8b;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    padding: 30px 23px;
+
+    border-radius: 28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.025)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.09);
+
+    box-shadow:
+    0 25px 80px
+    rgba(0,0,0,.35);
+
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+    translateY(60px)
+    scale(.95);
+
+    transition:
+    1s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.card p {
+
+    color: #b3bdc9;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+
+}
+
+.blue {
+
+    color: #78baff;
+
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score {
+
+    text-align: center;
+
+}
+
+
+.score-card {
+
+    padding: 45px 20px;
+
+}
+
+
+.score-number {
+
+    font-size: 105px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    background:
+    linear-gradient(
+        135deg,
+        #4da7ff,
+        #ffffff,
+        #697dff
+    );
+
+    background-size: 200%;
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+    scoreGlow 3s linear infinite,
+    scorePulse 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes scoreGlow {
+
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 200%;
+    }
+
+}
+
+
+@keyframes scorePulse {
+
+    0%,100% {
+
+        transform: scale(1);
+
+        filter:
+        drop-shadow(
+        0 0 5px
+        rgba(70,160,255,.2)
+        );
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+        filter:
+        drop-shadow(
+        0 0 30px
+        rgba(70,160,255,.7)
+        );
+
+    }
+
+}
+
+
+.score-text {
+
+    color: #929dac;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================
+   WISHES
+========================= */
+
+.wishes-card {
+
+    overflow: hidden;
+
+}
+
+
+.wish {
+
+    display: flex;
+
+    gap: 17px;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom:
+    1px solid
+    rgba(255,255,255,.06);
+
+    opacity: 0;
+
+    transform:
+    translateX(-50px);
+
+    transition:
+    .8s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.wish:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.wish.show {
+
+    opacity: 1;
+
+    transform:
+    translateX(0);
+
+}
+
+
+.icon {
+
+    min-width: 53px;
+
+    height: 53px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background:
+    rgba(55,140,225,.12);
+
+    border:
+    1px solid
+    rgba(90,170,240,.12);
+
+    font-size: 23px;
+
+    transition: .4s;
+}
+
+
+.wish.show .icon {
+
+    animation:
+    iconPop .6s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+@keyframes iconPop {
+
+    0% {
+        transform: scale(.5) rotate(-20deg);
+    }
+
+    70% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+    }
+
+}
+
+
+.wish h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.wish p {
+
+    color: #818c9c;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   QURAN
+========================= */
+
+.quran {
+
+    text-align: center;
+
+    padding: 45px 22px;
+
+    border-radius: 30px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(70,140,220,.13),
+        transparent 70%
+    );
+
+    border:
+    1px solid
+    rgba(100,160,220,.15);
+
+    opacity: 0;
+
+    transform:
+    scale(.85);
+
+    transition:
+    1.2s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.quran.show {
+
+    opacity: 1;
+
+    transform:
+    scale(1);
+
+}
+
+
+.quran-symbol {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+    animation:
+    moonFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes moonFloat {
+
+    0%,100% {
+        transform:
+        translateY(0)
+        rotate(0);
+    }
+
+    50% {
+        transform:
+        translateY(-8px)
+        rotate(8deg);
+    }
+
+}
+
+
+.arabic {
+
+    font-size: 25px;
+
+    line-height: 2;
+
+    color: #e7edf5;
+
+    margin-bottom: 25px;
+
+}
+
+
+.translation {
+
+    color: #c0c8d4;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.reference {
+
+    color: #6d96be;
+
+    font-size: 13px;
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.final-icon {
+
+    font-size: 70px;
+
+    margin-bottom: 25px;
+
+    animation:
+    prayerFloat 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes prayerFloat {
+
+    0%,100% {
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+    50% {
+
+        transform:
+        translateY(-13px)
+        scale(1.08);
+
+    }
+
+}
+
+
+.final h2 {
+
+    font-size: 44px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+}
+
+
+.final p {
+
+    color: #929dac;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+}
+
+
+.signature {
+
+    margin-top: 40px;
+
+    color: #7db9ef;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #46505d;
+
+    font-size: 12px;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,.05);
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .score-number {
+        font-size: 88px;
+    }
+
+    .final h2 {
+        font-size: 38px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     FLOATING STARS
+========================= -->
+
+<div class="star"
+style="left:8%;animation-duration:7s;">
+✦
+</div>
+
+<div class="star"
+style="left:25%;animation-duration:10s;animation-delay:2s;">
+·
+</div>
+
+<div class="star"
+style="left:45%;animation-duration:8s;animation-delay:4s;">
+✦
+</div>
+
+<div class="star"
+style="left:70%;animation-duration:11s;animation-delay:1s;">
+·
+</div>
+
+<div class="star"
+style="left:88%;animation-duration:9s;animation-delay:3s;">
+✦
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="small">
+ШЫН ЖҮРЕКТЕН
+</div>
+
+
+<h1>
+
+Асылханға
+
+<br>
+
+<span class="gradient">
+130+
+</span>
+
+</h1>
+
+
+<p class="hero-description">
+
+Бауыр, алдыңда маңызды сынақ тұр.
+Саған ҰБТ-да сәттілік,
+сабыр және өз күшіңе деген
+сенімділік тілеймін.
+
+</p>
+
+
+<a href="#message"
+class="button">
+
+Тілекті ашу ↓
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section id="message">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Асылхан, бауырым 🤝
+</h2>
+
+<p>
+Бұл сөздер шын жүректен
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<p>
+
+Бауыр, саған ҰБТ-да үлкен
+сәттілік тілеймін!
+
+Осы уақытқа дейін жинаған
+білімің мен еңбегің өз
+жемісін берсін.
+
+</p>
+
+
+<p>
+
+Емтихан кезінде жүрегің
+тыныш, ойың анық болсын.
+Қиын сұрақ кездессе де,
+сабыр сақтап, ары қарай
+сенімді түрде жалғастыра бер.
+
+</p>
+
+
+<p>
+
+Сен осы күнге дейін
+көп дайындалдың.
+
+Енді сол еңбегіңді
+көрсететін сәт келді.
+
+</p>
+
+
+<p>
+
+Ең бастысы —
+
+<span class="blue">
+өзіңе сен және ешқашан
+берілме.
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SCORE
+========================= -->
+
+<section>
+
+<div class="container score">
+
+<div class="title">
+
+<h2>
+Біздің мақсат 🎯
+</h2>
+
+</div>
+
+
+<div class="card score-card reveal">
+
+<div class="score-number">
+130+
+</div>
+
+
+<div class="score-text">
+
+Ин ша Аллах, осы сан
+сенің еңбегіңнің нәтижесі
+болсын.
+
+Төккен терің, жасаған
+дайындығың және барлық
+еңбегің ақталсын.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     WISHES
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Саған тілерім...
+</h2>
+
+<p>
+Ең маңызды төрт нәрсе
+</p>
+
+</div>
+
+
+<div class="card wishes-card reveal">
+
+
+<div class="wish">
+
+<div class="icon">
+🧠
+</div>
+
+<div>
+
+<h3>
+Ашық ой
+</h3>
+
+<p>
+Әр тапсырманы сабырмен
+және дұрыс шешуіңді
+тілеймін.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="wish">
+
+<div class="icon">
+🤲
+</div>
+
+<div>
+
+<h3>
+Сәттілік
+</h3>
+
+<p>
+Қажетті сәтте жолың
+ашық болсын.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="wish">
+
+<div class="icon">
+💪
+</div>
+
+<div>
+
+<h3>
+Өзіңе сенім
+</h3>
+
+<p>
+Өз күшіңе ешқашан
+күмәнданба.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="wish">
+
+<div class="icon">
+🎓
+</div>
+
+<div>
+
+<h3>
+130+ нәтиже
+</h3>
+
+<p>
+Еңбегің өзің қалаған
+нәтижеге жеткізсін.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QURAN
+========================= -->
+
+<section>
+
+<div class="container">
+
+
+<div class="quran reveal">
+
+<div class="quran-symbol">
+☪
+</div>
+
+
+<div class="arabic">
+
+فَإِنَّ مَعَ الْعُسْرِ يُسْرًا
+
+</div>
+
+
+<div class="translation">
+
+«Расында, қиындықпен бірге
+жеңілдік бар».
+
+</div>
+
+
+<div class="reference">
+
+Құран, «Әш-Шарх» сүресі, 94:5
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+<div class="container">
+
+
+<div class="final-icon">
+🤲
+</div>
+
+
+<h2>
+
+Ин ша Аллах,
+
+<br>
+
+<span class="gradient">
+130+
+</span>
+
+</h2>
+
+
+<p>
+
+Бауыр, саған шын жүрегімнен
+сәттілік тілеймін.
+
+Алла осы жолыңды жеңілдетіп,
+жүрегіңе тыныштық,
+ойыңа айқындық берсін.
+
+Еңбегіңнің нәтижесін көріп,
+өзің қалаған оқу орнына
+түсуіңе нәсіп етсін.
+
+</p>
+
+
+<div class="signature">
+
+Шын жүректен 🤍
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+Асылханға арналады • ҰБТ • 130+
+
+</footer>
+
+
+<script>
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+
+const observer =
+new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach((entry) => {
+
+if (entry.isIntersecting) {
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+
+{
+threshold: 0.12
+}
+
+);
+
+
+revealElements.forEach(
+element => observer.observe(element)
+);
+
+
+/* =========================
+   WISHES ANIMATION
+========================= */
+
+const wishes =
+document.querySelectorAll(".wish");
+
+
+const wishesCard =
+document.querySelector(".wishes-card");
+
+
+const wishObserver =
+new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach((entry) => {
+
+if (entry.isIntersecting) {
+
+wishes.forEach((wish, index) => {
+
+setTimeout(() => {
+
+wish.classList.add("show");
+
+}, index * 180);
+
+});
+
+}
+
+});
+
+},
+
+{
+threshold: 0.2
+}
+
+);
+
+
+wishObserver.observe(wishesCard);
+
+
+/* =========================
+   CLICK SPARK
+========================= */
+
+document.addEventListener(
+"click",
+function(e) {
+
+const spark =
+document.createElement("div");
+
+spark.innerHTML = "✦";
+
+spark.style.position = "fixed";
+
+spark.style.left =
+e.clientX + "px";
+
+spark.style.top =
+e.clientY + "px";
+
+spark.style.color = "#8fcaff";
+
+spark.style.fontSize = "20px";
+
+spark.style.pointerEvents = "none";
+
+spark.style.zIndex = "9999";
+
+spark.style.transition =
+"1s cubic-bezier(.2,.8,.2,1)";
+
+spark.style.textShadow =
+"0 0 15px #4da7ff";
+
+document.body.appendChild(spark);
+
+
+setTimeout(() => {
+
+spark.style.transform =
+"translateY(-60px) scale(2.5)";
+
+spark.style.opacity = "0";
+
+}, 50);
+
+
+setTimeout(() => {
+
+spark.remove();
+
+}, 1100);
+
+});
+
+
+/* =========================
+   RANDOM PARTICLES
+========================= */
+
+function createParticle() {
+
+    const particle =
+    document.createElement("div");
+
+    particle.innerHTML =
+    Math.random() > .5 ? "✦" : "·";
+
+    particle.className = "star";
+
+    particle.style.left =
+    Math.random() * 100 + "%";
+
+    particle.style.fontSize =
+    (8 + Math.random() * 10) + "px";
+
+    particle.style.animationDuration =
+    (7 + Math.random() * 7) + "s";
+
+    particle.style.animationDelay =
+    Math.random() * 4 + "s";
+
+    document.body.appendChild(particle);
+
+}
+
+
+for (let i = 0; i < 12; i++) {
+
+    createParticle();
+
+}
+
+</script>
+
+</body>
+
+</html>
